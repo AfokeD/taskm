@@ -10,8 +10,8 @@ export class User {
     @Column()
     email: string;
     @Column()
-  password: string;
-  //Relationship: One user has many tasks}
-  @OneToMany(() => Task, tasks => tasks.user)
+    passwordHash: string;
+  // Relationship: One user has many tasks
+  @OneToMany(() => Task, task => task.user)
   tasks: Task[];
 }
