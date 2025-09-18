@@ -11,6 +11,8 @@ export class User {
     email: string;
     @Column()
     passwordHash: string;
+    @Column()
+    dob: Date;
   // Relationship: One user has many tasks
   @OneToMany(() => Task, task => task.user)
   tasks: Task[];
